@@ -5,14 +5,17 @@ $fa-font-path: "/node_modules/@fortawesome/fontawesome-free/webfonts";
 .top {
 	display: flex;
 	flex-direction: column;
+	justify-content: space-between;
 	position: relative;
 	height: 300px;
-	background-color: blue;
 	align-items: center;
+	background: linear-gradient(#00d2ff, #3a7bd5);
+}
+
+.header__message {
 }
 
 .add__btn {
-	top: 200px;
 	height: 50px;
 	width: 50px;
 	border-radius: 50%;
