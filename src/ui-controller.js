@@ -4,7 +4,8 @@ export const UIController = (() => {
 		closeBtn: '.close-button',
 		tasksContainer: '.tasks__container',
 		addBtnTask: '.add__btn',
-		modal: '.modal'
+		modal: '.modal',
+		closeModal: '.close-button'
 	};
 
 	return {
@@ -23,6 +24,7 @@ export const UIController = (() => {
                                     <li>4</li>
                                     <li>5</li>
                                 </ul>
+                                 <span class="close-button">&times;</span>
                             </div>
                         </div>
                     </div>

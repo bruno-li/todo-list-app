@@ -5,24 +5,25 @@ import './vendor';
 
 const controller = ((UICtrl, todoCtrl) => {
 	const setupEventListeners = () => {
-		let DOMstr, addBtn, tasksContainer, todoContainer, modalContainer;
+		let DOMstr, addBtn, tasksContainer, todoContainer, modalContainer, closeModalBtn;
 		DOMstr = UICtrl.getDom();
 		addBtn = document.querySelector(DOMstr.addBtnTask);
 		tasksContainer = document.querySelector(DOMstr.tasksContainer);
 		todoContainer = document.querySelector(DOMstr.todoContainer);
 		modalContainer = document.querySelector(DOMstr.modal);
+		closeModalBtn = document.getElementById(DOMstr.closeModal);
 
 		addBtn.addEventListener('click', addTask);
 
 		todoContainer.addEventListener('click', (event) => {
 			if (event.target.classList.contains('project')) {
 				toggleModal(DOMstr);
+			} else if (event.target.classList.contains('close-button')) {
+				toggleModal(DOMstr);
 			}
 		});
 
 		window.addEventListener('click', (event) => {
-			console.dir(event.target);
-
 			if (event.target.classList.contains('modal')) {
 				toggleModal(DOMstr);
 			}
